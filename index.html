@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{height: 1500px;}
+        div{width: 300px;height: 300px; background-color: rgb(192, 255, 255); margin: 20px;
+        /* animation-name: color1;
+        animation-duration: 5s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in; */
+        }
+        .box1:hover{animation: color1 4s 0.5s infinite;}
+ 
+        @keyframes color1{
+            from{background-color: red;}
+            80%{background-color: yellow;}
+            to{background-color: blue;}
+        }
+
+        .box2{animation: box2 3s infinite;
+        animation-direction: alternate;}
+        @keyframes box2{
+            0%{background-color: orange;}
+            50%{border-radius: 50%;}
+            100%{background-color: green;}
+        }
+
+        .move1{height: 100px;}
+        .move1 img{animation: move1-1 1s infinite alternate;}
+        @keyframes move1-1{
+            0%{transform: translateY(20px);}
+            100%{}
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box1">상자1</div>
+    <div class="box2">상자2: 사각>원 / 주황>초록 / 3s</div>
+    <hr>
+    <div class="move1">
+        <h3>회원가입</h3>
+        <img src="img/icon_coin.jpg" alt="아이콘">
+    </div>
+    
+    <ul>
+        <li>목록</li>
+        <li class="box3">회원가입
+            <span><img src="img/icon_coin.jpg" alt="아이콘"></span>
+        </li>
+        <li>목록</li>
+        <li>목록</li>
+    </ul>
+    <style>
+        ul{list-style: none; background: lightgoldenrodyellow; display: flex; }
+        ul li{margin: 0 10px; background-color: lightgrey;}
+        .box3{position: relative;}
+        /* li span{display: block; animation: move1-1 2s infinite alternate;} */
+        li span{position: absolute; top: 20px; left: 0; animation: move2 0.5s infinite alternate;}
+        
+        @keyframes move2 {
+            0%{top: 20px;}
+            100%{top: 25px;}            
+        }
+    </style>
+    <br>
+    <div class="box4">상자</div>
+    <style>
+        
+        .box4{height: 80px; width: 300px;;background-color: orange;
+        animation: move3 4s ;}
+        @keyframes move3{
+            0%{opacity: 0; width: 100px; transform: rotate(20deg) scale(0.5);}
+            100%{opacity: 1; width: 300px; transform: rotate(0) scale(1);}
+        }
+    </style>
+</body>
+</html>
