@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul,ol,li{
+    list-style-type: none;
+}
+#wrap{
+    width: 100%;
+}
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+/**************** header ****************/
+header #login{
+    background-color: #E4EFEE;
+    height: 35px;
+}
+header #login .inner{
+    text-align: right;
+}
+header #login .inner a{
+    padding: 5px 10px;
+    display: inline-block;
+}
+header #logo{
+    text-align: center;
+}
+header #logo img{
+    margin: 35px 0;
+    width: 400px;
+}
+/**************** nav ****************/
+nav{
+    background-color: #6EB8C3;
+    height: 50px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.5);
+}
+nav ul li{
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+nav ul li a{
+    color: #fff;
+    padding: 12px 0;
+    display: block;
+}
+/**************** main ****************/
+/******** location ********/
+main #location{
+    text-align: right;
+    margin: 50px 0 100px 0;
+}
+main #location a:after{
+    content: ">";
+    margin: 0 5px 0 8px;
+}
+main #location a:last-child:after{
+    content: "";
+}
+/******** aside ********/
+main aside{
+    width: 240px;
+    float: left;
+    margin-right: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+/******** section ********/
+main section{
+    width: calc(1200px - 240px - 40px);
+    float: right;
+    background-color: yellow;
+    height: 1000px;
+    margin-bottom: 100px;
+}
+/**************** footer ****************/
+footer{
+    clear: both;
+    background-color: #ddd;
+    text-align: center;
+    padding: 60px 0;
+}

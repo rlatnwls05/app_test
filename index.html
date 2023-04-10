@@ -1,118 +1,94 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>카페 랜딩</title>
+    <title>평택시</title>
+    
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- 무조건 밑에-->
 
-    <link rel="stylesheet" href="css/jquery.bxslider.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css"> <!--내 css 파일이 마지막에 오도록-->
-
-    <script src="js/jquery-3.1.1.min.js"></script> <!--제이쿼리 파일이 가장 위-->
-    <script src="js/jquery.bxslider.js"></script>
-    <!--내가 작성한 스크립트가 마지막-->
-    <script>
-        function winOpen(url) {
-            window.open(url, 'child', 'location=no, status=no, width=500, height=500, scrollbar=no')
-        };
-        $(document).ready(function(){
-
-            //메인 슬라이드 _bxslide
-            $('.slider').bxSlider({
-                mode: 'vertical',// 가로 방향 수평 슬라이드
-                auto: true,
-                autoControls: false,
-                stopAutoOnClick: true,
-                pager: false,
-                controls:true,
-                // slideWidth: 600
-            });
-
-            //텍스트 슬라이드
-            $('.slider2').bxSlider({
-                auto: true,
-                autoControls: false,
-                stopAutoOnClick: true,
-                pager: false,
-                controls:true,
-                // slideWidth: 600
-            });
-
-            //탑으로 올라가는 플로팅 버튼
-            $('#top').click(function(){
-                $('html, body').stop().animate({scrollTop:0});
-            });
-
-        }); //제이쿼리
-    </script>
-
+    <script src="js/jquery-3.1.1.min.js"></script> <!-- 제이쿼리 중 제일 위에-->
+    <script src="js/slick.js"></script> <!--플러그인(효과)-->
+    <script src="js/main.js"></script> <!-- 내가 만드는 제이쿼리 -->
+   
 </head>
 <body>
     <div class="wrap">
         <header>
+            <div class="header_top">
+                <a href="#">로그인</a>
+            </div>
+            <h1 class="logo">
+                <a href="#"><img src="images/logo.png"></a>
+            </h1>
             <nav>
-                <ul>
-                    <li><a href="#sec1">카페 소개</a></li>
-                    <li><a href="#sec2">오시는 길</a></li>
-                    <li><a href="#sec3">이 달의 추천</a></li>
-                </ul>
+                <div class="inner">
+                    <ul>
+                        <li><a href="sub_layout.html">상담센터소개</a></li>
+                        <li><a href="#">상담사업</a></li>
+                        <li><a href="#">청소년안전망</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">센터소식</a></li>
+                    </ul>
+                </div>
             </nav>
-        </header>
+        </header><!--- header 끝 --->
         <main>
-            <section id="main-banner">
-                <div class="slider">
-                    <div><img src="images/header.jpg" alt="메인배너1"></div>
-                    <div><img src="images/header.jpg" alt="메인배너2"></div>
-                </div>
-            </section>
-            <section id="sec1"> <!--카페소개-->
-                <h1>카페 소개</h1>
-                <div>
-                    <img src="images/coffee.jpg" alt="커피잔 이미지">
-                    <div>
-                        <h2>영업시간 : 오전 9시 ~ 밤 10시</h2>
-                        <h2>휴무 : 매주 수요일</h2>
-                        <i>(수요일이 공휴일인 경우 수요일 영업, 다음날 휴무)</i>
+            <section id="main">
+                <div class="inner">
+                    <div class="site_slide">
+                        <a href="#">
+                            <img src="images/slide2.jpg">
+                        </a>
+                        <a href="#">
+                            <img src="./images/slide3.jpg">
+                        </a>
+                        <a href="#">
+                            <img src="./images/slide4.jpg">
+                        </a>
+                        <a href="#">
+                            <img src="./images/slide4.jpg">
+                        </a>
+                        <a href="#">
+                            <img src="./images/slide4.jpg">
+                        </a>
                     </div>
-                </div>
-            </section> <!--카페소개 끝-->
-            <section>
-                <div class="slider2">
-                    <div>안녕</div>
-                    <div>안녕2</div>
-                    <div>안녕3</div>
-                </div>
-            </section>
-            <section id="sec2"> <!--오시는 길-->
-                <h1>오시는 길</h1>
-                <div><!--flex-->
-                    <a href="#" onclick="winOpen('https://goo.gl/maps/KPY1Acwj6ocrn7SXA')"><img src="images/map.jpg" alt="지도 이미지"></a>
-                    <div>
-                        <h2>서귀포시 안덕면 사계리 0000-000</h2>
-                        <h2>제주 올레 10코스 산방산 근처</h2>
+                    <div class="con_flex">
+                        <div class="box1"><a href="#"></a></div>
+                        <div class="box2"><a href="#"></a></div>
+                        <div class="box3"><a href="#"></a></div>
+                        <div class="box4"><a href="#"></a></div>
+                        <div class="box5"><a href="#"></a></div>
+                        <div class="box6"><a href="#"></a></div>
                     </div>
                 </div>
             </section>
-            <section id="sec3">
-                <h1>이 달의 추천</h1>
-                <div>
-                    <div>
-                        <h2>핸드드립 아이스 커피</h2>
-                        <ol>
-                            <li>1인분 기준으로 서버에 각얼음 5조각(한조각의 20cc) 넣고 추출을 시작한다.</li>
-                            <li>평상시 보다 원두의 양은 2배 정도 (20g)와 추출액은 얼음 포함해서 200cc까지 내린다.</li>
-                            <li>아이스 잔에 얼음 6~7개 섞어서 시원하게 마신다</li>
-                        </ol>
+            <section id="main2">
+                <div class="inner">
+                    <div class="slide_banner">
+                        <div class="button_lf">
+                            <a href="#"></a>
+                        </div>
+                        <div class="banner">
+                            <a href="#"><img src="./images/logo_family.png"></a>
+                            <a href="#"><img src="./images/logo_gyeonggi.png"></a>
+                            <a href="#"><img src="./images/logo_pyeong.png"></a>
+                            <a href="#"><img src="./images/logo_ymca.png"></a>
+                            <a href="#"><img src="./images/logo_youth.png"></a>
+                            <a href="#"><img src="./images/logo_family.png"></a>
+                            <a href="#"><img src="./images/logo_gyeonggi.png"></a>
+                            <a href="#"><img src="./images/logo_pyeong.png"></a>
+                            <a href="#"><img src="./images/logo_ymca.png"></a>
+                            <a href="#"><img src="./images/logo_youth.png"></a>
+                        </div>
+                        
                     </div>
-                    <img src="images/ice.jpg" alt="커피잔 이미지">
                 </div>
             </section>
         </main>
-        <footer>
-            <p>My times with Coffee</p>
-        </footer>
     </div>
-    <div id="top">Top</div>
 </body>
 </html>
